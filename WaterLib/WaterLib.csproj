@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{244E5925-54D9-45F9-AAE8-8CCB66650CD5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WaterLib</RootNamespace>
+    <AssemblyName>WaterLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV">
+      <HintPath>C:\Emgu\emgucv-windows-universal 3.0.0.2157\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>C:\Emgu\emgucv-windows-universal 3.0.0.2157\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Detect.cs" />
+    <Compile Include="DetectHoG.cs" />
+    <Compile Include="DetectHoG\DetectHoGBiaoKe.cs" />
+    <Compile Include="DetectHoGOffline.cs" />
+    <Compile Include="DetectHoG\DetectHoGChuiXiGuan.cs" />
+    <Compile Include="DetectHoG\DetectHoGDanZhiLun.cs" />
+    <Compile Include="DetectHoG\DetectHoGQiaoJu.cs" />
+    <Compile Include="DetectHoG\DetectHoGZhong.cs" />
+    <Compile Include="DetectHoG\DetectHoGZhuWenLun.cs" />
+    <Compile Include="DetectLine.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe000.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe030.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe060.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe090.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe120.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe150.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe180.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe210.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe240.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe270.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe300.cs" />
+    <Compile Include="HoGModels\HoGBiaoKe330.cs" />
+    <Compile Include="HoGModels\HoGChuiXiGuan0.cs" />
+    <Compile Include="HoGModels\HoGChuiXiGuan135.cs" />
+    <Compile Include="HoGModels\HoGChuiXiGuan180.cs" />
+    <Compile Include="HoGModels\HoGChuiXiGuan225.cs" />
+    <Compile Include="HoGModels\HoGChuiXiGuan270.cs" />
+    <Compile Include="HoGModels\HoGChuiXiGuan315.cs" />
+    <Compile Include="HoGModels\HoGChuiXiGuan45.cs" />
+    <Compile Include="HoGModels\HoGChuiXiGuan90.cs" />
+    <Compile Include="HoGModels\HoGDanZhiLun0.cs" />
+    <Compile Include="HoGModels\HoGDanZhiLun135.cs" />
+    <Compile Include="HoGModels\HoGDanZhiLun180.cs" />
+    <Compile Include="HoGModels\HoGDanZhiLun225.cs" />
+    <Compile Include="HoGModels\HoGDanZhiLun270.cs" />
+    <Compile Include="HoGModels\HoGDanZhiLun315.cs" />
+    <Compile Include="HoGModels\HoGDanZhiLun45.cs" />
+    <Compile Include="HoGModels\HoGDanZhiLun90.cs" />
+    <Compile Include="HoGModels\HoGQiaoJu0.cs" />
+    <Compile Include="HoGModels\HoGQiaoJu135.cs" />
+    <Compile Include="HoGModels\HoGQiaoJu180.cs" />
+    <Compile Include="HoGModels\HoGQiaoJu225.cs" />
+    <Compile Include="HoGModels\HoGQiaoJu270.cs" />
+    <Compile Include="HoGModels\HoGQiaoJu315.cs" />
+    <Compile Include="HoGModels\HoGQiaoJu45.cs" />
+    <Compile Include="HoGModels\HoGQiaoJu90.cs" />
+    <Compile Include="HoGModels\HoGZhong000.cs" />
+    <Compile Include="HoGModels\HoGZhong030.cs" />
+    <Compile Include="HoGModels\HoGZhong060.cs" />
+    <Compile Include="HoGModels\HoGZhong090.cs" />
+    <Compile Include="HoGModels\HoGZhong120.cs" />
+    <Compile Include="HoGModels\HoGZhong150.cs" />
+    <Compile Include="HoGModels\HoGZhong180.cs" />
+    <Compile Include="HoGModels\HoGZhong210.cs" />
+    <Compile Include="HoGModels\HoGZhong240.cs" />
+    <Compile Include="HoGModels\HoGZhong270.cs" />
+    <Compile Include="HoGModels\HoGZhong300.cs" />
+    <Compile Include="HoGModels\HoGZhong330.cs" />
+    <Compile Include="HoGModels\HoGZhuWenLun0.cs" />
+    <Compile Include="HoGModels\HoGZhuWenLun135.cs" />
+    <Compile Include="HoGModels\HoGZhuWenLun180.cs" />
+    <Compile Include="HoGModels\HoGZhuWenLun225.cs" />
+    <Compile Include="HoGModels\HoGZhuWenLun270.cs" />
+    <Compile Include="HoGModels\HoGZhuWenLun315.cs" />
+    <Compile Include="HoGModels\HoGZhuWenLun45.cs" />
+    <Compile Include="HoGModels\HoGZhuWenLun90.cs" />
+    <Compile Include="LibSVM.cs" />
+    <Compile Include="Misc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
